@@ -1,3 +1,10 @@
+## [0.3.10](https://github.com/Stacked-Org/themes/compare/v0.3.9...v0.3.10) (2023-03-16)
+
+
+### Bug Fixes
+
+* **deps:** update dependency flutter_statusbarcolor_ns to ^0.5.0 ([#3](https://github.com/Stacked-Org/themes/issues/3)) ([341a3b1](https://github.com/Stacked-Org/themes/commit/341a3b1d4067e4178f94a3b187ff524bf127521e))
+
 ## 0.3.9
 - Flutter 3.0 compatibility 
   
