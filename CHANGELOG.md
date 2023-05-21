@@ -1,3 +1,11 @@
+## [0.3.11](https://github.com/Stacked-Org/themes/compare/v0.3.10...v0.3.11) (2023-05-21)
+
+
+### Bug Fixes
+
+* CI issue for release ([b701073](https://github.com/Stacked-Org/themes/commit/b701073b0e20bbbdf66fb7149450504e21c7eafc))
+* stacked_core replaced by stacked_shared ([#9](https://github.com/Stacked-Org/themes/issues/9)) ([3bb17e9](https://github.com/Stacked-Org/themes/commit/3bb17e91cbeae3a64043684777c4103ac3c77133))
+
 ## [0.3.10](https://github.com/Stacked-Org/themes/compare/v0.3.9...v0.3.10) (2023-03-16)
 
 
