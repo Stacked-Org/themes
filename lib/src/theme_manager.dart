@@ -32,10 +32,10 @@ class ThemeManager {
   final List<ThemeData>? themes;
 
   /// The theme to be used when not using the darkTheme
-  final ThemeData? lightTheme;
+  ThemeData? lightTheme;
 
   /// The theme to be used when not using the lightTheme
-  final ThemeData? darkTheme;
+  ThemeData? darkTheme;
 
   /// The default theme mode to use for the application when the application is frst used.
   ///
@@ -220,6 +220,28 @@ You can supply either a list of ThemeData objects to the themes property or a li
     _sharedPreferences.userThemeMode = themeMode;
 
     if (themeMode != ThemeMode.system) {
+      updateOverlayColors(
+          _selectedThemeMode == ThemeMode.dark ? darkTheme : lightTheme);
+    } else {
+      var currentBrightness =
+          ambiguate(SchedulerBinding.instance)!.window.platformBrightness;
+      updateOverlayColors(
+          currentBrightness == Brightness.dark ? darkTheme : lightTheme);
+    }
+
+    _themesController.add(ThemeModel(
+      selectedTheme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: _selectedThemeMode,
+    ));
+  }
+
+  /// Sets the light and dark theme for the application
+  void setThemes({ThemeData? lightTheme, ThemeData? darkTheme}) {
+    this.lightTheme = lightTheme;
+    this.darkTheme = darkTheme;
+
+    if (_selectedThemeMode != ThemeMode.system) {
       updateOverlayColors(
           _selectedThemeMode == ThemeMode.dark ? darkTheme : lightTheme);
     } else {
