@@ -1,3 +1,10 @@
+## [0.3.12](https://github.com/Stacked-Org/themes/compare/v0.3.11...v0.3.12) (2023-07-04)
+
+
+### Bug Fixes
+
+* replace deprecated properties and update example app ([#11](https://github.com/Stacked-Org/themes/issues/11)) ([cacc395](https://github.com/Stacked-Org/themes/commit/cacc3958a42295ec3ef3c1dcd43597cb1d5634bd))
+
 ## [0.3.11](https://github.com/Stacked-Org/themes/compare/v0.3.10...v0.3.11) (2023-05-21)
 
 
