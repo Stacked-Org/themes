@@ -46,6 +46,10 @@ class ThemeService {
   ThemeManagerMode get selectedThemeMode =>
       _getThemeManagerMode(_themeManager.selectedThemeMode);
 
+  /// Sets the light and dark theme for the application
+  void setThemes({ThemeData? lightTheme, ThemeData? darkTheme}) =>
+      _themeManager.setThemes(lightTheme: lightTheme, darkTheme: darkTheme);
+
   ThemeMode _getThemeMode(ThemeManagerMode mode) {
     switch (mode) {
       case ThemeManagerMode.dark:

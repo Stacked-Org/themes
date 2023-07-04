@@ -1,3 +1,6 @@
+## 0.3.12
+- Adds `setThemes` to allow changing the light and dark themes at runtime
+
 ## [0.3.11](https://github.com/Stacked-Org/themes/compare/v0.3.10...v0.3.11) (2023-05-21)
 
 
