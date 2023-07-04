@@ -5,7 +5,7 @@ import 'package:stacked_themes/stacked_themes.dart';
 import 'dark_light_viewmodel.dart';
 
 class DarkLightView extends StatelessWidget {
-  const DarkLightView({Key key}) : super(key: key);
+  const DarkLightView({super.key});
 
   @override
   Widget build(BuildContext context) {
