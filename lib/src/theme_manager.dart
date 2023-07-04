@@ -118,8 +118,9 @@ You can supply either a list of ThemeData objects to the themes property or a li
       }
 
       if (_selectedThemeMode == ThemeMode.system) {
-        final brightness =
-            ambiguate(SchedulerBinding.instance)!.window.platformBrightness;
+        final brightness = ambiguate(SchedulerBinding.instance)!
+            .platformDispatcher
+            .platformBrightness;
         selectedTheme = brightness == Brightness.dark ? darkTheme : lightTheme;
       } else {
         selectedTheme =
@@ -223,8 +224,9 @@ You can supply either a list of ThemeData objects to the themes property or a li
       updateOverlayColors(
           _selectedThemeMode == ThemeMode.dark ? darkTheme : lightTheme);
     } else {
-      var currentBrightness =
-          ambiguate(SchedulerBinding.instance)!.window.platformBrightness;
+      var currentBrightness = ambiguate(SchedulerBinding.instance)!
+          .platformDispatcher
+          .platformBrightness;
       updateOverlayColors(
           currentBrightness == Brightness.dark ? darkTheme : lightTheme);
     }
