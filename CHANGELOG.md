@@ -1,3 +1,10 @@
+## [0.3.13](https://github.com/Stacked-Org/themes/compare/v0.3.12...v0.3.13) (2024-07-11)
+
+
+### Bug Fixes
+
+* remove readme text to trigger push lol ([#16](https://github.com/Stacked-Org/themes/issues/16)) ([35c14a6](https://github.com/Stacked-Org/themes/commit/35c14a6ac7433146a7cfd94a4676c0987d491e44))
+
 ## [0.3.12](https://github.com/Stacked-Org/themes/compare/v0.3.11...v0.3.12) (2023-07-04)
 
 
