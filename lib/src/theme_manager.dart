@@ -6,9 +6,11 @@ import 'package:provider/provider.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 import 'package:stacked_themes/src/locator_setup.dart';
-import 'package:stacked_themes/src/services/platform_service.dart';
+import 'package:stacked_themes/src/services/platform_service.dart'
+    if (dart.library.js) 'package:stacked_themes/src/services/platform_service_web.dart';
 import 'package:stacked_themes/src/services/shared_preferences_service.dart';
-import 'package:stacked_themes/src/services/statusbar_service.dart';
+import 'package:stacked_themes/src/services/statusbar_service.dart'
+    if (dart.library.js) 'package:stacked_themes/src/services/statusbar_service_web.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 const String SelectedTheme = 'selected-theme';
