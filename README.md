@@ -184,4 +184,4 @@ locator.registerSingleton(() => ThemeService.getInstance());
 
 Then use it in the `ViewModel` or other services by getting it from the `locator`. And that’s it. That’s all the functionality required. If you’d like to talk more about this please checkout [the slack](https://join.slack.com/t/filledstacks/shared_invite/zt-8hae7yly-vjZX3sW5twN9v7DBlTsgrQ) and ask your questions there.
 
-If you want to request some additional features or changes don’t hesitate to file an issue.
+
