@@ -5,22 +5,22 @@ List<ThemeData> getThemes() {
     ThemeData(
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: Colors.yellow)
-            .copyWith(background: Colors.blue)),
+            .copyWith(surface: Colors.blue)),
     ThemeData(
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: Colors.green)
-            .copyWith(background: Colors.white)),
+            .copyWith(surface: Colors.white)),
     ThemeData(
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: Colors.green)
-            .copyWith(background: Colors.purple)),
+            .copyWith(surface: Colors.purple)),
     ThemeData(
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: Colors.red)
-            .copyWith(background: Colors.black)),
+            .copyWith(surface: Colors.black)),
     ThemeData(
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: Colors.blue)
-            .copyWith(background: Colors.red)),
+            .copyWith(surface: Colors.red)),
   ];
 }

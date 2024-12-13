@@ -11,7 +11,7 @@ class DarkLightView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ViewModelBuilder<DarkLightViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
-        backgroundColor: Theme.of(context).colorScheme.background,
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Center(
