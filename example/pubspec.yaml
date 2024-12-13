@@ -29,7 +29,7 @@ dependencies:
   cupertino_icons: ^1.0.5
   stacked:
   stacked_themes:
-  get_it: ^7.2.0
+  get_it: ^8.0.2
 
 dependency_overrides: 
   stacked_themes:
