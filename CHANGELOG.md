@@ -1,3 +1,10 @@
+## [0.3.15](https://github.com/Stacked-Org/themes/compare/v0.3.14...v0.3.15) (2024-12-13)
+
+
+### Bug Fixes
+
+* bumps get_it to 8.0.2 ([122ef9b](https://github.com/Stacked-Org/themes/commit/122ef9bb8aca7bef3587085dcb7fef6005084f46))
+
 ## [0.3.14](https://github.com/Stacked-Org/themes/compare/v0.3.13...v0.3.14) (2024-12-13)
 
 
