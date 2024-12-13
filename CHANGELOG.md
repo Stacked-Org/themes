@@ -1,3 +1,10 @@
+## [0.3.14](https://github.com/Stacked-Org/themes/compare/v0.3.13...v0.3.14) (2024-12-13)
+
+
+### Bug Fixes
+
+* updates flutter_statusbarcolor_ns to ^0.6.0 ([2dc6a47](https://github.com/Stacked-Org/themes/commit/2dc6a470eac45af23f0447d65845e2a9b0d25ef3))
+
 ## [0.3.13](https://github.com/Stacked-Org/themes/compare/v0.3.12...v0.3.13) (2024-07-11)
 
 
