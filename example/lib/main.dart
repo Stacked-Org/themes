@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
         colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: Colors.yellow[700], // Your accent color
-          background: Colors.blue[700],
+          surface: Colors.blue[700],
         ),
       ),
       lightTheme: ThemeData(
@@ -27,10 +27,10 @@ class MyApp extends StatelessWidget {
             .copyWith(
               secondary: Colors.yellow[300], // Your accent color
             )
-            .copyWith(background: Colors.blue[300]),
+            .copyWith(surface: Colors.blue[300]),
       ),
-      statusBarColorBuilder: (theme) => theme.colorScheme.secondary,
-      navigationBarColorBuilder: (theme) => theme.colorScheme.secondary,
+      statusBarColorBuilder: (theme) => theme?.colorScheme.secondary,
+      navigationBarColorBuilder: (theme) => theme?.colorScheme.secondary,
       // themes: getThemes(),
       builder: (context, regularTheme, darkTheme, themeMode) => MaterialApp(
         title: 'Flutter Demo',

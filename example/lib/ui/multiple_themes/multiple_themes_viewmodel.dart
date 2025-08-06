@@ -6,7 +6,7 @@ class ThemeModel {
   final int index;
   final String title;
 
-  ThemeModel({this.index, this.title});
+  ThemeModel({required this.index, required this.title});
 }
 
 class MultipleThemesViewModel extends BaseViewModel {
