@@ -6,17 +6,17 @@ repository: https://github.com/Stacked-Org/themes.git
 issue_tracker: https://github.com/Stacked-Org/framework/issues
 
 environment:
-  sdk: ">=2.19.0 <3.0.0"
+  sdk: ">=2.19.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
   stacked_shared:
-  provider: ^6.0.0
-  rxdart: ^0.27.1
-  shared_preferences: ^2.0.6
-  get_it: ^8.0.2
+  provider: ^6.1.5+1
+  rxdart: '>=0.27.1 <0.29.0'
+  shared_preferences: '>=2.0.6 <3.0.0'
+  get_it: '>=8.0.2 <9.0.0'
   flutter_statusbarcolor_ns: ^0.6.0
 
   universal_io: ^2.0.4
