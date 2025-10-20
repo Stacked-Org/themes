@@ -4,14 +4,14 @@ import 'package:stacked/stacked.dart';
 import 'multiple_themes_viewmodel.dart';
 
 class MultipleThemesView extends StatelessWidget {
-  const MultipleThemesView({Key? key}) : super(key: key);
+  const MultipleThemesView({super.key});
 
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
     return ViewModelBuilder<MultipleThemesViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
-        backgroundColor: theme.colorScheme.background,
+        backgroundColor: theme.colorScheme.surface,
         body: Center(
           child: Wrap(
             spacing: 30,

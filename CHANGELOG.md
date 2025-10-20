@@ -1,3 +1,31 @@
+## [0.3.15](https://github.com/Stacked-Org/themes/compare/v0.3.14...v0.3.15) (2024-12-13)
+
+
+### Bug Fixes
+
+* bumps get_it to 8.0.2 ([122ef9b](https://github.com/Stacked-Org/themes/commit/122ef9bb8aca7bef3587085dcb7fef6005084f46))
+
+## [0.3.14](https://github.com/Stacked-Org/themes/compare/v0.3.13...v0.3.14) (2024-12-13)
+
+
+### Bug Fixes
+
+* updates flutter_statusbarcolor_ns to ^0.6.0 ([2dc6a47](https://github.com/Stacked-Org/themes/commit/2dc6a470eac45af23f0447d65845e2a9b0d25ef3))
+
+## [0.3.13](https://github.com/Stacked-Org/themes/compare/v0.3.12...v0.3.13) (2024-07-11)
+
+
+### Bug Fixes
+
+* remove readme text to trigger push lol ([#16](https://github.com/Stacked-Org/themes/issues/16)) ([35c14a6](https://github.com/Stacked-Org/themes/commit/35c14a6ac7433146a7cfd94a4676c0987d491e44))
+
+## [0.3.12](https://github.com/Stacked-Org/themes/compare/v0.3.11...v0.3.12) (2023-07-04)
+
+
+### Bug Fixes
+
+* replace deprecated properties and update example app ([#11](https://github.com/Stacked-Org/themes/issues/11)) ([cacc395](https://github.com/Stacked-Org/themes/commit/cacc3958a42295ec3ef3c1dcd43597cb1d5634bd))
+
 ## [0.3.11](https://github.com/Stacked-Org/themes/compare/v0.3.10...v0.3.11) (2023-05-21)
 
 

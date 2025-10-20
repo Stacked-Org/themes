@@ -6,9 +6,11 @@ import 'package:provider/provider.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:stacked_shared/stacked_shared.dart';
 import 'package:stacked_themes/src/locator_setup.dart';
-import 'package:stacked_themes/src/services/platform_service.dart';
+import 'package:stacked_themes/src/services/platform_service.dart'
+    if (dart.library.js) 'package:stacked_themes/src/services/platform_service_web.dart';
 import 'package:stacked_themes/src/services/shared_preferences_service.dart';
-import 'package:stacked_themes/src/services/statusbar_service.dart';
+import 'package:stacked_themes/src/services/statusbar_service.dart'
+    if (dart.library.js) 'package:stacked_themes/src/services/statusbar_service_web.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
 const String SelectedTheme = 'selected-theme';
@@ -32,10 +34,10 @@ class ThemeManager {
   final List<ThemeData>? themes;
 
   /// The theme to be used when not using the darkTheme
-  final ThemeData? lightTheme;
+  ThemeData? lightTheme;
 
   /// The theme to be used when not using the lightTheme
-  final ThemeData? darkTheme;
+  ThemeData? darkTheme;
 
   /// The default theme mode to use for the application when the application is frst used.
   ///
@@ -118,8 +120,9 @@ You can supply either a list of ThemeData objects to the themes property or a li
       }
 
       if (_selectedThemeMode == ThemeMode.system) {
-        final brightness =
-            ambiguate(SchedulerBinding.instance)!.window.platformBrightness;
+        final brightness = ambiguate(SchedulerBinding.instance)!
+            .platformDispatcher
+            .platformBrightness;
         selectedTheme = brightness == Brightness.dark ? darkTheme : lightTheme;
       } else {
         selectedTheme =
@@ -220,6 +223,29 @@ You can supply either a list of ThemeData objects to the themes property or a li
     _sharedPreferences.userThemeMode = themeMode;
 
     if (themeMode != ThemeMode.system) {
+      updateOverlayColors(
+          _selectedThemeMode == ThemeMode.dark ? darkTheme : lightTheme);
+    } else {
+      var currentBrightness = ambiguate(SchedulerBinding.instance)!
+          .platformDispatcher
+          .platformBrightness;
+      updateOverlayColors(
+          currentBrightness == Brightness.dark ? darkTheme : lightTheme);
+    }
+
+    _themesController.add(ThemeModel(
+      selectedTheme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: _selectedThemeMode,
+    ));
+  }
+
+  /// Sets the light and dark theme for the application
+  void setThemes({ThemeData? lightTheme, ThemeData? darkTheme}) {
+    this.lightTheme = lightTheme;
+    this.darkTheme = darkTheme;
+
+    if (_selectedThemeMode != ThemeMode.system) {
       updateOverlayColors(
           _selectedThemeMode == ThemeMode.dark ? darkTheme : lightTheme);
     } else {
