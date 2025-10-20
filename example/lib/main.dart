@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
             )
             .copyWith(background: Colors.blue[300]),
       ),
-      statusBarColorBuilder: (theme) => theme.colorScheme.secondary,
-      navigationBarColorBuilder: (theme) => theme.colorScheme.secondary,
+      statusBarColorBuilder: (theme) => theme?.colorScheme.secondary,
+      navigationBarColorBuilder: (theme) => theme?.colorScheme.secondary,
       // themes: getThemes(),
       builder: (context, regularTheme, darkTheme, themeMode) => MaterialApp(
         title: 'Flutter Demo',
