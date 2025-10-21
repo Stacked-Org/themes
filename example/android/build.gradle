@@ -1,20 +1,9 @@
-buildscript {
-    ext.kotlin_version = '1.4.10'
-    repositories {
-        google()
-        jcenter()
-    }
-
-    dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
@@ -26,6 +15,45 @@ subprojects {
     project.evaluationDependsOn(':app')
 }
 
-task clean(type: Delete) {
+subprojects { subproject ->
+    if (subproject.name == "flutter_statusbarcolor_ns") {
+        subproject.plugins.withId("com.android.library") {
+            subproject.android {
+                namespace "com.sameer.flutterstatusbarcolor.flutterstatusbarcolor"
+            }
+        }
+    }
+}
+
+subprojects { subproject ->
+    subproject.plugins.withId("com.android.application") {
+        subproject.android {
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_11
+                targetCompatibility JavaVersion.VERSION_11
+            }
+        }
+        subproject.tasks.withType(KotlinCompile).configureEach { task ->
+            task.kotlinOptions {
+                jvmTarget = JavaVersion.VERSION_11.toString()
+            }
+        }
+    }
+    subproject.plugins.withId("com.android.library") {
+        subproject.android {
+            compileOptions {
+                sourceCompatibility JavaVersion.VERSION_11
+                targetCompatibility JavaVersion.VERSION_11
+            }
+        }
+        subproject.tasks.withType(KotlinCompile).configureEach { task ->
+            task.kotlinOptions {
+                jvmTarget = JavaVersion.VERSION_11.toString()
+            }
+        }
+    }
+}
+
+tasks.register("clean", Delete) {
     delete rootProject.buildDir
 }
