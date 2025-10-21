@@ -14,7 +14,7 @@ dependencies:
 
   stacked_shared:
   provider: ^6.0.0
-  rxdart: ^0.27.1
+  rxdart: ^0.28.0
   shared_preferences: ^2.0.6
   get_it: ^8.2.0
   flutter_statusbarcolor_ns: ^0.6.0
