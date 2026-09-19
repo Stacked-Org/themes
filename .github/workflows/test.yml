@@ -18,7 +18,7 @@ jobs:
         with:
           channel: 'stable'
       - run: flutter pub get
-      - run: dart format --fix --set-exit-if-changed .
+      - run: dart format --output=none --set-exit-if-changed .
       - run: flutter analyze
       - run: flutter test --coverage
       - name: Setup LCOV
@@ -28,5 +28,7 @@ jobs:
         with:
           coverage-files: coverage/lcov*.info
           artifact-name: code-coverage-report
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # The default token is read-only for pull requests from forks, so only
+          # post the coverage comment for same-repository branches.
+          github-token: ${{ github.event.pull_request.head.repo.full_name == github.repository && secrets.GITHUB_TOKEN || '' }}
           update-comment: true
