@@ -1,3 +1,10 @@
+## [0.3.16](https://github.com/Stacked-Org/themes/compare/v0.3.15...v0.3.16) (2026-09-23)
+
+
+### Bug Fixes
+
+* **deps:** update dependency rxdart to ^0.28.0 ([#25](https://github.com/Stacked-Org/themes/issues/25)) ([ce6a8f5](https://github.com/Stacked-Org/themes/commit/ce6a8f54e3c807e3a717cdb142ec6bf49ca731c7))
+
 ## [0.3.15](https://github.com/Stacked-Org/themes/compare/v0.3.14...v0.3.15) (2024-12-13)
 
 
