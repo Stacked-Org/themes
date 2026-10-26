@@ -32,6 +32,10 @@ class SharedPreferencesService {
       return ThemeMode.light;
     }
 
+    if (userThemeString == ThemeMode.system.toString()) {
+      return ThemeMode.system;
+    }
+
     return null;
   }
 
