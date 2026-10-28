@@ -1,9 +1,8 @@
 import 'package:get_it/get_it.dart';
-import 'package:stacked_themes/src/services/platform_service.dart'
-    if (dart.library.js) 'package:stacked_themes/src/services/platform_service_web.dart';
+import 'package:stacked_themes/src/services/platform_service.dart';
 import 'package:stacked_themes/src/services/shared_preferences_service.dart';
-import 'package:stacked_themes/src/services/statusbar_service.dart'
-    if (dart.library.js) 'package:stacked_themes/src/services/statusbar_service_web.dart';
+import 'package:stacked_themes/src/services/statusbar_service_web.dart'
+    if (dart.library.io) 'package:stacked_themes/src/services/statusbar_service.dart';
 
 final locator = GetIt.asNewInstance();
 
